@@ -28,6 +28,7 @@ public class LinkedListMain
          * 3.print appending order linkedlist
          * 4.inserting value btw preNote and nextNode
          * 5.press 5 then delete 1st element
+         * 6.press 6 then delete the last element in the linkedlist
          */
 
         System.out.println("Welcome to DataStructure Program\n\n"
@@ -36,7 +37,8 @@ public class LinkedListMain
                 + "2. Create Linked List by adding 30 and 56 to 70\n" //uc2
                 + "3. Create Linked List by apending 30 and 70 to 56\n" //uc3
                 + "4. Insert 30 between 56 & 70\n" //uc4
-                + "5. Ability to delete the first element\n");//uc5
+                + "5. Ability to delete the first element\n"  //uc5
+                + "6. Delete the last element in the LinkedList\n");//uc6
 
 
 
@@ -103,8 +105,20 @@ public class LinkedListMain
                 linkedList.insert(70);
                 int pop = linkedList.pop();
                 System.out.println(pop);
-                linkedList.print();
 
+                linkedList.print();
+                break;
+
+                /*
+                for uc 6
+                 */
+            case 6:
+                linkedList.insert(56);
+                linkedList.insert(30);
+                linkedList.insert(70);
+                linkedList.popLast();
+
+                linkedList.print();
                 break;
 
         }
