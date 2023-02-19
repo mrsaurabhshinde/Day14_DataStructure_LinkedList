@@ -198,8 +198,41 @@ public class LinkedList
             newNode = newNode.next;
         }
         return index;
+    }
 
+    /*
+     * Method to add a node at the specified position in the list
+     */
+    public void insertelement(int position, int data) {
 
+        /*
+         * Create a new node
+         */
+        Node node = new Node(data);
+
+        // Point the new node's next to head
+        if (position == 1) {
+            node.next = head;
+            head = node;
+        } else {
+            Node previous = head;
+            int count = 1; // position - 1
+
+            /*
+             *while loop is used
+             */
+            while (count < position - 1) {
+                /*
+                 *update prev to point to new node
+                 */
+                previous = previous.next;
+                count++;
+            }
+
+            Node temp = previous.next;
+            previous.next = node;
+            node.next = temp;
+        }
     }
 
 }
