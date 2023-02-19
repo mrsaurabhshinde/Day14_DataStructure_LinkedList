@@ -23,6 +23,7 @@ public class LinkedListMain
 
         /*
          * in sout 1st print the welcome msg and then choose our option then if
+<< UC10_ascending_order
          * 1.we press 1 then they print inserting data
          * 2.if we press 2 print adding no
          * 3.print appending order linkedlist
@@ -32,19 +33,28 @@ public class LinkedListMain
          * 7.press 7 Search linked list to find Node with Value
          * 8.press 8 insert element in any position
          * 9.delete node
+         * 10.Press  Create Ascending Order
+=
+         * we press 1 then they print inserting data
+>> main
          */
 
         System.out.println("Welcome to DataStructure Program\n\n"
                 + "Choose your option:\n"
+                //<< UC10_ascending_order
                 + "1. Create a simple LinkedList\n"  //uc1
                 + "2. Create Linked List by adding 30 and 56 to 70\n" //uc2
                 + "3. Create Linked List by apending 30 and 70 to 56\n" //uc3
                 + "4. Insert 30 between 56 & 70\n" //uc4
                 + "5. Ability to delete the first element\n"  //uc5
                 + "6. Delete the last element in the LinkedList\n"//uc6
-                + "7. Find node with value 30"  //uc7
-                + "8. Insert 40 after 30"  //uc8
-                + "9. Delete the Node");//uc9
+                + "7. Find node with value 30\n"  //uc7
+                + "8. Insert 40 after 30\n"  //uc8
+                + "9. Delete the Node\n"   //uc9
+                + "10. Ascending order");//uc10
+//=======
+        //+ "1. Create a simple LinkedList\n" );
+//>>> main
 
 
         int option = sc.nextInt();
@@ -56,9 +66,12 @@ public class LinkedListMain
          */
         switch (option) {
 
+//<<<<< UC10_ascending_order
             /*
             for uc 1
              */
+                   // =======
+//>>>>> main
             case 1:
 
                 linkedList.insert(56);
@@ -67,6 +80,7 @@ public class LinkedListMain
 
                 linkedList.print();
                 break;
+//<<<<< UC10_ascending_order
             /*
             for uc 2
              */
@@ -152,14 +166,35 @@ public class LinkedListMain
 
                 break;
 
+
+
                 /*
                 for uc 9
                  */
             case 9:
-
+                linkedList.insert(56);
+                linkedList.insert(30);
+                linkedList.insert(40);
+                linkedList.insert(70);
                 linkedList.deleteANode(40);
                 linkedList.print();
 
+                break;
+
+
+                /*
+                for uc 10
+                 */
+            case 10:
+                linkedList.insert(56);
+                linkedList.insert(30);
+                linkedList.insert(40);
+                linkedList.insert(70);
+                linkedList.sort();
+                linkedList.print();
+                break;
+//=======
+//>>>> main
         }
     }
 }
