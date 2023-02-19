@@ -166,6 +166,38 @@ public class LinkedList
         }
         temp.next = null;
         System.out.println("Delete last node::");
+    }
+
+    /*
+     * create method name as search passing parameter name as int val.
+     * in this operation Search linked list to find Node with Value
+     */
+    public int search ( int val){
+        /*
+         * check list empty or not
+         */
+        if (head == null) {
+            System.out.println("List is Empty");
+            return -1;
+        }
+        int index = 1;
+        Node newNode = head;
+        /*
+         * while loop is used
+         * newNod is not empty
+         */
+        while (newNode != null) {
+            /*
+             * condition checked if condition is true then break this loop
+             * position of 30 is 2
+             */
+            if (newNode.data == val) {
+                break;
+            }
+            index++;
+            newNode = newNode.next;
+        }
+        return index;
 
 
     }

@@ -29,6 +29,7 @@ public class LinkedListMain
          * 4.inserting value btw preNote and nextNode
          * 5.press 5 then delete 1st element
          * 6.press 6 then delete the last element in the linkedlist
+         * 7.press 7 Search linked list to find Node with Value
          */
 
         System.out.println("Welcome to DataStructure Program\n\n"
@@ -38,8 +39,8 @@ public class LinkedListMain
                 + "3. Create Linked List by apending 30 and 70 to 56\n" //uc3
                 + "4. Insert 30 between 56 & 70\n" //uc4
                 + "5. Ability to delete the first element\n"  //uc5
-                + "6. Delete the last element in the LinkedList\n");//uc6
-
+                + "6. Delete the last element in the LinkedList\n"//uc6
+                + "7. Find node with value 30" );//uc7
 
 
         int option = sc.nextInt();
@@ -119,6 +120,18 @@ public class LinkedListMain
                 linkedList.popLast();
 
                 linkedList.print();
+                break;
+
+                /*
+                 for uc 7
+                 */
+            case 7:
+                linkedList.insert(56);
+                linkedList.insert(30);
+                linkedList.insert(70);
+                int search = linkedList.search(30);
+                System.out.println("Position of 30::"+search);
+
                 break;
 
         }
