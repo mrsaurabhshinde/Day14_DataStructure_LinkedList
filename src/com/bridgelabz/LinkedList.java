@@ -113,4 +113,26 @@ public class LinkedList
         prevNode.next = newNode;
 
     }
+    /*
+     * creat a method name as pop
+     * in pop method used for deleting element
+     * here this is used for delete 1st element in linked list
+     */
+    public int pop() {
+        //variable
+        int popData = 0;
+
+        /*
+         * check the condition
+         */
+        if (head == null) {
+            System.out.println("Stack over flow ");
+        }
+        popData = head.data;
+        head = head.next;
+
+        return popData;
+
+    }
+
 }
