@@ -75,10 +75,11 @@ public class LinkedList
         }
 
     }
+
     /*
      * create a push method for adding new node and passing parameter
      */
-    public void push ( int data){
+    public void push(int data) {
         /*
          * Create a new node
          */
@@ -113,6 +114,7 @@ public class LinkedList
         prevNode.next = newNode;
 
     }
+
     /*
      * creat a method name as pop
      * in pop method used for deleting element
@@ -132,6 +134,39 @@ public class LinkedList
         head = head.next;
 
         return popData;
+
+    }
+    /*
+     * create a method name as popLast
+     * this is used here to delete last element in linked list
+     */
+    public void popLast() {
+
+        /*
+         * condition is checked
+         */
+        if (head == null) {
+            System.out.println("Stack is empty");
+        }
+        if (head == null) {
+            System.out.println(head.data);
+            head = null;
+        }
+        /*
+         * head is stored in temp variable
+         */
+        Node temp = head;
+
+        /*
+         * while loop is used
+         */
+        while (temp.next.next != null) {
+            temp = temp.next;
+
+        }
+        temp.next = null;
+        System.out.println("Delete last node::");
+
 
     }
 
