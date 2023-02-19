@@ -26,7 +26,7 @@ public class LinkedList
     public Node insert(int data) {
 
         /*
-         * Check if the list is empty
+         * Create a new node
          */
         Node newNode = new Node(data);
 
@@ -73,6 +73,21 @@ public class LinkedList
             System.out.print(temp.data + "-> ");
             temp = temp.next;
         }
+
+    }
+    /*
+     * create a push method for adding new node and passing parameter
+     */
+    public void push ( int data){
+        /*
+         * Create a new node
+         */
+        Node newNode = new Node(data);
+        /*
+         * new node is head
+         */
+        newNode.next = head;
+        head = newNode;
 
     }
 }
