@@ -234,5 +234,30 @@ public class LinkedList
             node.next = temp;
         }
     }
+    /*
+     * create a method deleteNode and passing parameter.
+     */
+    public void deleteANode(int value) {
+        /*
+         * Check if the list is empty
+         */
+        if (this.head == null) {
+            System.out.println("List is Empty");
+            return;
+        }
 
+        /*
+         * in TempNode is head
+         */
+        Node tempNode = head;
+        /*
+         * using while loop
+         */
+        while (tempNode.next.data != value) {
+            tempNode = tempNode.next;
+        }
+        Node previousNode = tempNode;
+        Node nextNode = tempNode.next.next;
+        previousNode.next = nextNode;
+    }
 }
